@@ -17,12 +17,22 @@
 
             <ul class="nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Iniciar Sesion</a>
+                    <a class="nav-link active" aria-current="page" href="#">Cerrar Sesion</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sucursal</a>
+                    <a class="nav-link" href="#">Sucursales</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eliminar producto </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Actualizar producto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Buscar productos</a>
+                </li>
+                
 
             </ul>
         </div>

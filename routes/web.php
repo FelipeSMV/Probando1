@@ -13,10 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/home', function () {
     return view('welcome');
 });
-
-Route::get('/verduras','VerdurasController@index');
-Route::get('/login','productosController@inisesion');
- 
+Route::get('/eliminar', function () {
+    return view('eliminarP');
+});
+Route::get('/actualizar', function () {
+    return view('actualizarP');
+});
+Route::get('/consultar', function () {
+    return view('consultarP');
+});
+Route::get('/lista', function () {
+    return view('listar');
+});
