@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Laravel - @yield('title')</title>
+    <title>Evaluación</title>
 </head>
 <body>
     @section ('header')
@@ -16,21 +16,24 @@
             <a class="navbar-brand" href="#">Gestion de Stock</a>
 
             <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Cerrar Sesion</a>
-                </li>
+            <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Registrar</a>
+                </li>  
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sucursales</a>
+                    <a class="nav-link" href="{{route('listar')}}">Sucursales</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Eliminar producto </a>
+                    <a class="nav-link" href="{{route('eliminar')}}">Eliminar producto </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Actualizar producto</a>
+                    <a class="nav-link" href="{{route('actualizar')}}">Actualizar producto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Buscar productos</a>
+                    <a class="nav-link" href="{{route('buscar')}}">Buscar productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('login')}}">Cerrar Sesion</a>
                 </li>
                 
 

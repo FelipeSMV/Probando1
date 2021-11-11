@@ -7,7 +7,9 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Gestion de Stock</a>
 
-            
+            <ul>
+              <li><a href="{{route('home')}}">Casita</a></li>
+            </ul>
         </div>
     </nav>
 @stop
