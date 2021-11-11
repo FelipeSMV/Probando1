@@ -17,29 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/contacto',function(){
-    return "formulario de contacto";
-}); 
-Route::get('productos/{producto?}/{precio?}', function($producto="Bebida",$precio=null ){
-    return view('productos',array(
-        'producto'=> $producto,
-        'precio'=> $precio
-
-    ));
-})->where([
-    'producto' => '[A-Za-z]+',
-    'precio'=> '[0-9]+'
-]);
-
-Route::match(['get','post'],'/hola-mundo', function (){
-    return "Hola Buenas";
-});
-
-Route::get('/listado/{titulo}', function ($titulo){
-    return view('listado')
-    ->with('titulo',$titulo)
-    ->with('frutas',array('Naranja', 'Pera', 'Manzana', 'Frutilla'));
-});
 Route::get('/verduras','VerdurasController@index');
-Route::get('/verduras/agregar','VerdurasController@agregarVerdura');
-Route::post('/verduras/guardar','VerdurasController@guardarVerdura');
+Route::get('/login','productosController@inisesion');
+ 

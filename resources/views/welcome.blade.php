@@ -3,7 +3,7 @@
 @section('header')
 @section('content')
 <hr>
-<form class="row g-3">
+<form class="row g-3" action="" method="POST">
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Nombre del producto</label>
   <input type="text" class="form-control" id="nproducto">
