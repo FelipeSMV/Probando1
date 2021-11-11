@@ -17,23 +17,16 @@
 
             <ul class="nav">
             <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Registrar</a>
-                </li>  
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('listar')}}">Sucursales</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('eliminar')}}">Eliminar producto </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('actualizar')}}">Actualizar producto</a>
-                </li>
+                    <a class="nav-link active" aria-current="page" href="{{route('Producto.create')}}">Registrar producto</a>
+                </li>      
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('buscar')}}">Buscar productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('login')}}">Cerrar Sesion</a>
+                    <form action="login" method="POST">
+                    @csrf
+                   <button class="nav-link" type="submit">Cerrar Sesión</button>
+                   </form>
                 </li>
                 
 

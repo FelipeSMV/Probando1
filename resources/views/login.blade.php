@@ -7,22 +7,25 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Gestion de Stock</a>
 
-            <ul>
-              <li><a href="{{route('home')}}">Casita</a></li>
-            </ul>
         </div>
     </nav>
 @stop
 @section('content')
+
 <hr>
 <form class="row g-3" action="" method="POST">
+  @csrf
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+  <input type="text" class="form-control" id="name" name="name">
+</div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email</label>
-  <input type="email" class="form-control" id="mail">
+  <input type="email" class="form-control" id="email" name="email">
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-  <input type="password" class="form-control" id="pass">
+  <input type="password" class="form-control" id="password" name="password">
 </div>
 
 

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,21 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get("/",['uses' => 'App\Http\Controllers\adminController@inisesion', 'as'=> 'login']);
 
-Route::get("/eliminar",[ 'uses'=>'App\Http\Controllers\productosController@eliminarPro', 'as'=> 'eliminar']);
-Route::get("/actualizar",['uses'=> 'App\Http\Controllers\productosController@actualizarPro', 'as'=>'actualizar' ]);
+Route::resource('Producto','App\Http\Controllers\ProductoController');
 Route::get("/buscar",['uses'=> 'App\Http\Controllers\productosController@buscarPro', 'as'=> 'buscar']);
-Route::get("/lista",['uses'=>'App\Http\Controllers\productosController@listarPro', 'as' => 'listar']);
-Route::get("/home",['uses' => 'App\Http\Controllers\productosController@registroPro', 'as'=> 'home']);
+Route::view('login','login')->name('login')-> middleware('guest'); 
+Route::view('Producto','Producto/create ')-> middleware('auth');
+
+Route::post ('login',function(){
+    $credentials = request()-> only('email', 'password');
+   if (Auth::attempt ($credentials)){
+       request()-> session()-> regenerate();
+
+       return  redirect('Producto/create'); 
+       
+   }
+   
+   return redirect('login');
+});
+Route::post('master','App\Http\Controllers\adminController@logout');
